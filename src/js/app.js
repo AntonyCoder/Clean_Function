@@ -1,6 +1,12 @@
-// TODO: write your code here
-import sum from './basic';
-
-console.log('worked');
-
-console.log(sum([1, 2]));
+export default function checkHealth (person) {
+    if(person.health > 50) {
+        return 'healthy';
+    }
+    if(person.health <= 50 && person.health >= 15) {
+        return 'wounded';
+    }
+    if(person.health < 15 && person.health > 0) {
+        return 'critical';
+    } 
+    return 'Некоректные данные';
+}
